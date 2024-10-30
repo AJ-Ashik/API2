@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Link Converter</title>
+    <style>
+    	body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+    </style>
+</head>
+<body>
+    <h1>Video Link Converter</h1>
+    <div>
+        <textarea id="inputLinks" rows="10" cols="50" placeholder="Paste your video links here..."></textarea>
+        <button id="convertBtn">Convert Links</button>
+    </div>
+    <h2>Converted Links:</h2>
+    <pre id="outputLinks"></pre>
+    <script>
+function convertVideoLinks(originalLinks) {
+    return originalLinks.map(originalLink => {
+        let convertedLink;
+
+        // লিংকটি একটি নির্দিষ্ট ডোমেনে রূপান্তরিত করা হচ্ছে
+        if (originalLink.endsWith('.m3u8')) {
+            convertedLink = originalLink.replace('original-domain.com', 'new-domain.com');
+        } else if (originalLink.endsWith('.mp4')) {
+            convertedLink = originalLink.replace('original-domain.com', 'new-domain.com');
+        } else if (originalLink.endsWith('.mkv')) {
+            convertedLink = originalLink.replace('original-domain.com', 'new-domain.com');
+        } else {
+            convertedLink = 'Invalid video link';
+        }
+
+        return convertedLink;
+    });
+}
+
+document.getElementById("convertBtn").addEventListener("click", function() {
+    const inputText = document.getElementById("inputLinks").value;
+    const videoLinks = inputText.split('\n').map(link => link.trim());
+    const newLinks = convertVideoLinks(videoLinks);
+    document.getElementById("outputLinks").textContent = newLinks.join('\n');
+});
+</script>
+</body>
+</html>
