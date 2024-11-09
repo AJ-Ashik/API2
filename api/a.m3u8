@@ -1,0 +1,6 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:27550
+#EXT-X-TARGETDURATION:6
+#EXTINF:6.000,
+http://tv.cloudcdn.me/live.ts?channelId=198&uid=6154&deviceMac=00:1A:79:51:31:21
