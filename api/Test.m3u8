@@ -3,14 +3,4 @@
 #EXT-X-MEDIA-SEQUENCE:27550
 #EXT-X-TARGETDURATION:6
 #EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796513910.ts
-#EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796519769.ts
-#EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796525642.ts
-#EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796532036.ts
-#EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796537895.ts
-#EXTINF:6.000,
-https://bldcmprod-cdn.toffeelive.com/live/sony_yay_576/1729796544025.ts
+http://tv.cloudcdn.me/live.ts?channelId=198&uid=6154&deviceMac=00:1A:79:51:31:21
